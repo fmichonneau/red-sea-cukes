@@ -1,0 +1,32 @@
+sources:
+  - R/find_sister.R
+
+packages:
+  - ape
+  - phylobase
+  - ggplot2
+  - igraph
+  - doMC
+  - seqManagement
+  - maps
+  - sp
+  - rgeos
+
+targets:
+  all:
+    depends:
+      - data
+
+  data:
+    depends:
+      - list_sister
+      - test_arabia
+
+  list_sister_with_dup:
+    command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
+
+  list_sister:
+    command: rm_duplicate_seq(list_sister_with_dup)
+
+  test_arabia:
+    command: is_arabia(list_sister)
