@@ -1,0 +1,6 @@
+Got version of MARBoL from Dropbox and:
+- fixed taxonomy:
+  - some Zygothuria had synallactidae as family
+  - some poorly identified were missing higher levels
+- fixed missing sample:
+  - used UF catalog number or whatever other info was available
