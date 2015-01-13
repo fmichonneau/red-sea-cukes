@@ -1,5 +1,6 @@
 sources:
   - R/find_sister.R
+  - R/load_cukeDB.R
 
 packages:
   - ape
@@ -19,6 +20,7 @@ targets:
 
   data:
     depends:
+      - cukeDB
       - list_sister
       - test_arabia
 
@@ -29,4 +31,15 @@ targets:
     command: rm_duplicate_seq(list_sister_with_dup)
 
   test_arabia:
-    command: is_arabia(list_sister)
+    command: is_arabia(list_sister, cukeDB)
+
+  cukeDB:
+    command: load_cukeDB(cukeDB_noLabels)
+
+  cukeDB_noLabels:
+    command: load_cukeDB_noLabels(echinoDB)
+
+  ## using the old version so it matches what's in the tree
+  echinoDB:
+    command: load_echinoDB(file="data/raw/MARBoL_Echinos_VIII_2013.csv")
+    ## command: load_echinoDB(file="data/raw/20141812.MARBoL_Echinos_current.csv")
