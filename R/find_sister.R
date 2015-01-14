@@ -44,8 +44,6 @@ is_arabia <- function(sis_seq, cukeDB) {
     res <- lapply(sis_seq, function(x) {
         uniqStr <- gsub("_t_", "_", names(x))
         mtch <- match(gsub("_[0-9]+amb$", "", names(x)), cukeDB$Labels)
-        naMtch <- names(x)[is.na(mtch)]
-        cat(paste(naMtch[-grep("^QUERY", naMtch)], collapse="\n"), "\n\n")
         latlong <- cukeDB[mtch, c("decimalLatitude", "decimalLongitude")]
         ## Red Sea + Gulf of Aden polygon corners:
         ## lat: 30 -- long: 30
