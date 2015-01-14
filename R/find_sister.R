@@ -56,3 +56,59 @@ is_arabia <- function(sis_seq, cukeDB) {
     })
     res
 }
+
+make_im_file <- function(seqs, pop, output_dir="data/im_files",
+                         alg_file) {
+
+    alg <- ape::read.dna(file=alg_file, format="sequential", as.character=TRUE,
+                         as.matrix=TRUE)
+
+    if (! file.exists(output_dir)) {
+        message("creating output_dir", output_dir)
+        dir.create(output_dir)
+    }
+
+    stopifnot(length(seqs) == length(pop))
+
+
+    ## still need to order sequences so they are split between red sea/outside
+    ## rename sequences so their names is 10 character long
+    ## filter out species for which only 1 population is represented and species without enough individuals
+    ## role of gap only sites?
+
+    for (i in seq_along(seqs)) {
+        output <- file.path(output_dir, paste0(i, ".im"))
+
+        ## line 1: arbitrary text
+        cat("something", "\n", file=output)
+
+        ## line 2: population names
+        pop_names <- na.omit(unique(pop[[i]]))
+        if (length(pop_names) > 2) {
+            stop("there should only be 2 populations")
+        } else {
+            cat(paste(pop_names, collapse=" "), "\n", file=output, append=TRUE)
+        }
+
+        ## line 3: an integer representing the number of loci
+        ## here only mtDNA, so 1
+        cat(1, "\n", file=output, append=TRUE)
+
+        ## line 4: information about the locus
+        ## name - number of ind for pop1 - number of ind for pop2
+        ## length of sequence - letter for model of molecular evolution (H for HKY)
+        ## inheritence scalar (1 for nuc, .75 for X linked, 0.25 for Y or mtDNA)
+        ## (mutation rate, apparently not needed for msbayes)
+        loc_name <- "COI"
+        pop_sizes <- as.numeric(table(pop[[i]]))
+        loc_length <- dim(alg)[2]
+        cat(loc_name, pop_sizes, loc_length, "H", 0.25, "\n",
+            file=output, append=TRUE)
+
+        alg_names <- gsub("^(RS_)", "QUERY___\\1", dimnames(alg)[[1]])
+        sub_seq <- alg[match(names(seqs[[i]]), alg_names), ]
+        sub_seq <- apply(sub_seq, 1, function(x) paste0(x, collapse=""))
+        cat(sub_seq, sep="\n", file=output, append=TRUE)
+    }
+
+}

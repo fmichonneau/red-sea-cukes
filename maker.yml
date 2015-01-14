@@ -20,9 +20,7 @@ targets:
 
   data:
     depends:
-      - cukeDB
-      - list_sister
-      - test_arabia
+      - im_files
 
   list_sister_with_dup:
     command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
@@ -43,3 +41,7 @@ targets:
   echinoDB:
     command: load_echinoDB(file="data/raw/MARBoL_Echinos_VIII_2013.csv")
     ## command: load_echinoDB(file="data/raw/20141812.MARBoL_Echinos_current.csv")
+
+  im_files:
+    command: make_im_file(seqs=list_sister, pop=test_arabia,
+                          alg_file="data/raxml-epa-input/epa-input.phy")
