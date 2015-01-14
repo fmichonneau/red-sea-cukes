@@ -44,4 +44,5 @@ targets:
 
   im_files:
     command: make_im_file(seqs=list_sister, pop=test_arabia,
-                          alg_file="data/raxml-epa-input/epa-input.phy")
+                          alg_file="data/raxml-epa-input/epa-input.phy",
+                          cukeDB=cukeDB)

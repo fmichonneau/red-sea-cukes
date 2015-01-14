@@ -58,7 +58,7 @@ is_arabia <- function(sis_seq, cukeDB) {
 }
 
 make_im_file <- function(seqs, pop, output_dir="data/im_files",
-                         alg_file) {
+                         alg_file, cukeDB) {
 
     alg <- ape::read.dna(file=alg_file, format="sequential", as.character=TRUE,
                          as.matrix=TRUE)
@@ -70,16 +70,19 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
 
     stopifnot(length(seqs) == length(pop))
 
-
-    ## still need to order sequences so they are split between red sea/outside
-    ## rename sequences so their names is 10 character long
     ## filter out species for which only 1 population is represented and species without enough individuals
     ## role of gap only sites?
 
     for (i in seq_along(seqs)) {
+
+        if (length(seqs[[i]]) < 2) {
+            message("not enough sequences for ", i)
+            next
+        }
+
         output <- file.path(output_dir, paste0(i, ".im"))
 
-        ## line 1: arbitrary text
+        ## line 1: arbitrary text -- getting species names
         cat("something", "\n", file=output)
 
         ## line 2: population names
@@ -105,9 +108,46 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         cat(loc_name, pop_sizes, loc_length, "H", 0.25, "\n",
             file=output, append=TRUE)
 
+        ## line 5: sequence data
         alg_names <- gsub("^(RS_)", "QUERY___\\1", dimnames(alg)[[1]])
         sub_seq <- alg[match(names(seqs[[i]]), alg_names), ]
+        sub_seq <- sub_seq[c(which(pop[[i]] == pop_names[1]),   # to reorder the sequences
+                             which(pop[[i]] == pop_names[2])), ]
+        rs_names <- grep("^RS_", dimnames(sub_seq)[[1]])
+        match_names <- match(dimnames(sub_seq)[[1]], cukeDB$Labels)
+        new_names <- cukeDB[match_names, "Sample"]
+        new_names[rs_names] <- gsub("(.+)_+(UF_?[0-9]+)(_.+)?$", "\\2",
+                                    dimnames(sub_seq)[[1]][rs_names])
+        new_names[is.na(new_names)] <- gsub("(.+)_+(UF_?[^_]+)(_.+)?$", "\\2",
+                                            dimnames(sub_seq)[[1]][is.na(new_names)])
+
+        if (any(is.na(new_names))) {
+            stop("don't know what to do about:",
+                 paste(dimnames(sub_seq)[[1]][is.na(new_names)], collapse=", "))
+        }
+
+        if (length(new_names) == length(pop[[i]][!is.na(pop[[i]])])) {
+            new_names <- paste0(new_names, abbreviate(pop[[i]][!is.na(pop[[i]])], minlength=1))
+        } else {
+            stop("i = ", i, ". problem with NAs")
+        }
+
+        new_names <- gsub("UF_?", "", new_names)
+        new_names <- gsub("^(.+)-", "", new_names)
+        new_names <- gsub("_", "", new_names)
+
+        add_spc <- sapply(new_names, function(x) {
+            nbSpc <- 10 - nchar(x)
+            if (nbSpc < 0) {
+                message("sequence name too long for ", x, ". Using first 10 char.")
+                x <- substr(x, 1, 10)
+                nbSpc <- 0
+            }
+            paste(rep.int(" ", nbSpc), collapse="")
+        })
+
         sub_seq <- apply(sub_seq, 1, function(x) paste0(x, collapse=""))
+        sub_seq <- paste0(new_names, add_spc, sub_seq)
         cat(sub_seq, sep="\n", file=output, append=TRUE)
     }
 
