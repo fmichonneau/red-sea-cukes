@@ -83,6 +83,9 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         pop_names <- na.omit(unique(pop[[i]]))
         if (length(pop_names) > 2) {
             stop("there should only be 2 populations")
+        } else if (length(pop_names) == 1) {
+            message("not enough populations for ", i)
+            next
         }
 
         pop_sizes <- as.numeric(table(pop[[i]])[pop_names])
