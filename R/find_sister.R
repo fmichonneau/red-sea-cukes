@@ -80,39 +80,30 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
             next
         }
 
-        output <- file.path(output_dir, paste0(i, ".im"))
-
-        ## line 1: arbitrary text -- getting species names
-        cat("something", "\n", file=output)
-
-        ## line 2: population names
         pop_names <- na.omit(unique(pop[[i]]))
         if (length(pop_names) > 2) {
             stop("there should only be 2 populations")
-        } else {
-            cat(paste(pop_names, collapse=" "), "\n", file=output, append=TRUE)
         }
 
-        ## line 3: an integer representing the number of loci
-        ## here only mtDNA, so 1
-        cat(1, "\n", file=output, append=TRUE)
-
-        ## line 4: information about the locus
-        ## name - number of ind for pop1 - number of ind for pop2
-        ## length of sequence - letter for model of molecular evolution (H for HKY)
-        ## inheritence scalar (1 for nuc, .75 for X linked, 0.25 for Y or mtDNA)
-        ## (mutation rate, apparently not needed for msbayes)
-        loc_name <- "COI"
-        pop_sizes <- as.numeric(table(pop[[i]]))
+        pop_sizes <- as.numeric(table(pop[[i]])[pop_names])
         loc_length <- dim(alg)[2]
-        cat(loc_name, pop_sizes, loc_length, "H", 0.25, "\n",
-            file=output, append=TRUE)
 
-        ## line 5: sequence data
+        ## order sequences according to their respective populations
         alg_names <- gsub("^(RS_)", "QUERY___\\1", dimnames(alg)[[1]])
-        sub_seq <- alg[match(names(seqs[[i]]), alg_names), ]
+        sub_seq <- alg[match(names(seqs[[i]]), alg_names),, drop=FALSE ]
         sub_seq <- sub_seq[c(which(pop[[i]] == pop_names[1]),   # to reorder the sequences
-                             which(pop[[i]] == pop_names[2])), ]
+                             which(pop[[i]] == pop_names[2])),, drop=FALSE ]
+
+        ## extract species name for 1 line of file and file name
+        spp_name <- strsplit(gsub("^QUERY___", "", dimnames(sub_seq)[[1]]), "_")
+        spp_name <- sapply(spp_name, function(x) {
+            paste(x[2:3], collapse="_")
+        })
+        spp_name <- names(table(spp_name)[which.max(table(spp_name))])
+        spp_name <- gsub("~", "", spp_name)
+        spp_name <- gsub("_+$", "", spp_name)
+
+        ## converts sequence names to something short
         rs_names <- grep("^RS_", dimnames(sub_seq)[[1]])
         match_names <- match(dimnames(sub_seq)[[1]], cukeDB$Labels)
         new_names <- cukeDB[match_names, "Sample"]
@@ -127,11 +118,13 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         }
 
         if (length(new_names) == length(pop[[i]][!is.na(pop[[i]])])) {
-            new_names <- paste0(new_names, abbreviate(pop[[i]][!is.na(pop[[i]])], minlength=1))
+            new_names <- paste0(new_names, abbreviate(pop[[i]][!is.na(pop[[i]])],
+                                                      minlength=1))
         } else {
             stop("i = ", i, ". problem with NAs")
         }
 
+        ## clean up the sequence names
         new_names <- gsub("UF_?", "", new_names)
         new_names <- gsub("^(.+)-", "", new_names)
         new_names <- gsub("_", "", new_names)
@@ -148,7 +141,30 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
 
         sub_seq <- apply(sub_seq, 1, function(x) paste0(x, collapse=""))
         sub_seq <- paste0(new_names, add_spc, sub_seq)
-        cat(sub_seq, sep="\n", file=output, append=TRUE)
-    }
 
+        output <- file.path(output_dir, paste0(spp_name, ".im"))
+
+        ## line 1: arbitrary text -- getting species names
+        cat(spp_name, "\n", file=output)
+
+        ## line 2: population names
+        cat(paste(pop_names, collapse=" "), "\n", file=output, append=TRUE)
+
+        ## line 3: an integer representing the number of loci
+        ## here only mtDNA, so 1
+        cat(1, "\n", file=output, append=TRUE)
+
+        ## line 4: information about the locus
+        ## name - number of ind for pop1 - number of ind for pop2
+        ## length of sequence - letter for model of molecular evolution (H for HKY)
+        ## inheritence scalar (1 for nuc, .75 for X linked, 0.25 for Y or mtDNA)
+        ## (mutation rate, apparently not needed for msbayes)
+        loc_name <- "COI"
+        cat(loc_name, pop_sizes, loc_length, "H", 0.25, "\n",
+            file=output, append=TRUE)
+
+        ## line 5: sequence data
+             cat(sub_seq, sep="\n", file=output, append=TRUE)
+    }
+    TRUE
 }
