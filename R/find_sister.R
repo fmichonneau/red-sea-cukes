@@ -136,14 +136,15 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
             nbSpc <- 10 - nchar(x)
             if (nbSpc < 0) {
                 message("sequence name too long for ", x, ". Using first 10 char.")
-                x <- substr(x, 1, 10)
+                nm <- substr(x, 1, 9)
+                x <- paste0(nm, substr(x, nchar(x), nchar(x)))
                 nbSpc <- 0
             }
-            paste(rep.int(" ", nbSpc), collapse="")
+            paste0(x, paste(rep.int(" ", nbSpc), collapse=""))
         })
 
         sub_seq <- apply(sub_seq, 1, function(x) paste0(x, collapse=""))
-        sub_seq <- paste0(new_names, add_spc, sub_seq)
+        sub_seq <- paste0(add_spc, sub_seq)
 
         output <- file.path(output_dir, paste0(spp_name, ".im"))
 
