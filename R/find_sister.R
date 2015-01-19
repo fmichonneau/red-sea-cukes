@@ -60,14 +60,18 @@ is_arabia <- function(sis_seq, cukeDB) {
 make_im_file <- function(seqs, pop, output_dir="data/im_files",
                          alg_file, cukeDB) {
 
+    ## Get complete alignment used to build tree
     alg <- ape::read.dna(file=alg_file, format="sequential", as.character=TRUE,
                          as.matrix=TRUE)
 
+    ## Create directory if non-existing
     if (! file.exists(output_dir)) {
         message("creating output_dir", output_dir)
         dir.create(output_dir)
     }
 
+    ## Make sure that the names of the species groups and their populations
+    ## are identical
     stopifnot(length(seqs) == length(pop))
 
     list_files <- character(length(seqs))
