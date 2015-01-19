@@ -1,4 +1,5 @@
 sources:
+  - R/genFasta.R
   - R/find_sister.R
   - R/load_cukeDB.R
 
@@ -23,15 +24,13 @@ targets:
       - im_files
       - data/im_files/infile.list
       - data/im_files/batch.masterIn.fromIM
+      - data/im_files/check_labels.pdf
 
   list_sister_with_dup:
     command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
 
   list_sister:
     command: rm_duplicate_seq(list_sister_with_dup)
-
-  test_arabia:
-    command: is_arabia(list_sister, cukeDB)
 
   cukeDB:
     command: load_cukeDB(cukeDB_noLabels)
@@ -45,9 +44,10 @@ targets:
     ## command: load_echinoDB(file="data/raw/20141812.MARBoL_Echinos_current.csv")
 
   im_files:
-    command: make_im_file(seqs=list_sister, pop=test_arabia,
+    command: make_im_file(seqs=list_sister,
                           alg_file="data/raxml-epa-input/epa-input.phy",
-                          cukeDB=cukeDB)
+                          cukeDB=cukeDB, to_ignore_file="data/species_to_ignore.txt",
+                          to_add_file="data/species_to_add.txt")
 
   data/im_files/infile.list:
     command: make_infile(im_files, dest=target_name)
@@ -56,4 +56,6 @@ targets:
     depends: data/im_files/infile.list
     command: run_convertIM()
 
-  data/im_files/
+  data/im_files/check_labels.pdf:
+    command: check_tree_labels(im_files, tree_file="data/raxml-epa-input/RAxML_labelledTree.epaTest",
+                               dest="data/im_files/check_labels.pdf")

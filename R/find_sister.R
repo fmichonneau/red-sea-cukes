@@ -54,8 +54,8 @@ is_arabia <- function(sis_seq, cukeDB) {
     isara
 }
 
-make_im_file <- function(seqs, pop, output_dir="data/im_files",
-                         alg_file, cukeDB) {
+make_im_file <- function(seqs, output_dir="data/im_files",
+                         alg_file, cukeDB, to_ignore_file, to_add_file) {
 
     ## Get complete alignment used to build tree
     alg <- ape::read.dna(file=alg_file, format="sequential", as.character=TRUE,
@@ -67,18 +67,37 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         dir.create(output_dir)
     }
 
-    ## Make sure that the names of the species groups and their populations
-    ## are identical
-    stopifnot(length(seqs) == length(pop))
+    to_ignore <- scan(file=to_ignore_file, what="character")
+    to_ignore <- paste0(to_ignore, "_?")
+    to_ignore <- paste0(to_ignore, collapse="|")
+    to_ignore <- sapply(seqs, function(x) length(grep(to_ignore, names(x))) > 0)
+    seqs <- seqs[! to_ignore]
+
+    to_add <- scan(file=to_add_file, what="character", sep="\n")
+    to_add <- strsplit(to_add, " ")
+    to_add <- lapply(to_add, function(x) paste0(x, "_?"))
+    pos_add <- lapply(to_add, function(x) sapply(x, function(y) {
+        grep(y, dimnames(alg)[[1]])
+    }))
+
+    alg_names <- gsub("^(RS_)", "QUERY___\\1", dimnames(alg)[[1]])
+    pos_seq <- lapply(seqs, function(x) match(names(x), alg_names))
+    pos_seq <- c(pos_seq, pos_add)
+    pos_seq <- lapply(pos_seq, function(x) {
+        names(x) <- alg_names[x]
+        x
+    })
+
+    pop <- lapply(pos_seq, function(x) is_arabia(x, cukeDB=cukeDB))
 
     list_files <- character(length(seqs))
     tree_labels <- vector("list", length(seqs))
 
-    ## filter out species species without enough individuals (can we do with only 1 )
+    ## filter out species species without enough individuals (can we do with only 1)
 
-    for (i in seq_along(seqs)) {
+    for (i in seq_along(pos_seq)) {
 
-        if (length(seqs[[i]]) < 2) {
+        if (length(pos_seq[[i]]) < 2) {
             message("not enough sequences for ", i)
             next
         }
@@ -95,8 +114,8 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         loc_length <- dim(alg)[2]
 
         ## order sequences according to their respective populations
-        alg_names <- gsub("^(RS_)", "QUERY___\\1", dimnames(alg)[[1]])
-        sub_seq <- alg[match(names(seqs[[i]]), alg_names), ]
+
+        sub_seq <- alg[pos_seq[[i]], ]
         sub_seq <- sub_seq[c(which(pop[[i]] == pop_names[1]),    # to reorder the sequences
                              which(pop[[i]] == pop_names[2])), ]
         tree_labels[[i]] <- dimnames(sub_seq)[[1]]
@@ -215,5 +234,3 @@ check_tree_labels <- function(im_files, tree_file, dest) {
 run_convertIM <- function(infile="infile.list", wd="data/im_files") {
     system(paste0("cd ", wd, ";", "convertIM.pl ", infile))
 }
-
-
