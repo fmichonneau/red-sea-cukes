@@ -21,6 +21,8 @@ targets:
   data:
     depends:
       - im_files
+      - data/im_files/infile.list
+      - data/im_files/batch.masterIn.fromIM
 
   list_sister_with_dup:
     command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
@@ -46,3 +48,12 @@ targets:
     command: make_im_file(seqs=list_sister, pop=test_arabia,
                           alg_file="data/raxml-epa-input/epa-input.phy",
                           cukeDB=cukeDB)
+
+  data/im_files/infile.list:
+    command: make_infile(im_files, dest=target_name)
+
+  data/im_files/batch.masterIn.fromIM:
+    depends: data/im_files/infile.list
+    command: run_convertIM()
+
+  data/im_files/
