@@ -93,9 +93,9 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
 
         ## order sequences according to their respective populations
         alg_names <- gsub("^(RS_)", "QUERY___\\1", dimnames(alg)[[1]])
-        sub_seq <- alg[match(names(seqs[[i]]), alg_names),, drop=FALSE ]
+        sub_seq <- alg[match(names(seqs[[i]]), alg_names), ]
         sub_seq <- sub_seq[c(which(pop[[i]] == pop_names[1]),   # to reorder the sequences
-                             which(pop[[i]] == pop_names[2])),, drop=FALSE ]
+                             which(pop[[i]] == pop_names[2])), ]
 
         ## extract species name for 1 line of file and file name
         spp_name <- strsplit(gsub("^QUERY___", "", dimnames(sub_seq)[[1]]), "_")
