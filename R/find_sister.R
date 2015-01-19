@@ -184,3 +184,8 @@ make_infile <- function(im_files, dest) {
     cat(im_files, sep="\n", file=dest)
 }
 
+run_convertIM <- function(infile="infile.list", wd="data/im_files") {
+    system(paste0("cd ", wd, ";", "convertIM.pl ", infile))
+}
+
+
