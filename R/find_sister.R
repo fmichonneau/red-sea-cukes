@@ -75,6 +75,7 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
     stopifnot(length(seqs) == length(pop))
 
     list_files <- character(length(seqs))
+    tree_labels <- vector("list", length(seqs))
 
     ## filter out species species without enough individuals (can we do with only 1 )
 
@@ -99,8 +100,9 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         ## order sequences according to their respective populations
         alg_names <- gsub("^(RS_)", "QUERY___\\1", dimnames(alg)[[1]])
         sub_seq <- alg[match(names(seqs[[i]]), alg_names), ]
-        sub_seq <- sub_seq[c(which(pop[[i]] == pop_names[1]),   # to reorder the sequences
+        sub_seq <- sub_seq[c(which(pop[[i]] == pop_names[1]),    # to reorder the sequences
                              which(pop[[i]] == pop_names[2])), ]
+        tree_labels[[i]] <- dimnames(sub_seq)[[1]]
 
         ## extract species name for 1 line of file and file name
         spp_name <- strsplit(gsub("^QUERY___", "", dimnames(sub_seq)[[1]]), "_")
@@ -177,7 +179,9 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         ## line 5: sequence data
              cat(sub_seq, sep="\n", file=output, append=TRUE)
     }
-    list_files[nzchar(list_files)]
+    res <- list_files[nzchar(list_files)]
+    attr(res, "tree_labels") <- tree_labels
+    res
 }
 
 make_infile <- function(im_files, dest) {
@@ -186,6 +190,29 @@ make_infile <- function(im_files, dest) {
         x[length(x)]
     })
     cat(im_files, sep="\n", file=dest)
+}
+
+check_tree_labels <- function(im_files, tree_file, dest) {
+    tree <- rncl::read_newick_phylo(file=tree_file)
+    tree_labels <- attr(im_files, "tree_labels")
+    tree_labels <- lapply(tree_labels, function(x) {
+        gsub("^(RS_)", "QUERY___\\1", x)
+    })
+
+
+    pdf(file=dest, width=15)
+
+    for (i in seq_along(tree_labels)) {
+        if (length(tree_labels[[i]]) > 1) {
+            to_rm <- tree$tip.label[! tree$tip.label %in% tree_labels[[i]]]
+            if (length(to_rm) == length(tree$tip.label)) browser()
+            sub_tree <- ape::drop.tip(tree, to_rm)
+            plot(sub_tree)
+            add.scale.bar(x=0, y=length(sub_tree$tip.label))
+        } else next
+    }
+    dev.off()
+    TRUE
 }
 
 run_convertIM <- function(infile="infile.list", wd="data/im_files") {
