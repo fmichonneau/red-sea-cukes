@@ -70,8 +70,9 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
 
     stopifnot(length(seqs) == length(pop))
 
-    ## filter out species for which only 1 population is represented and species without enough individuals
-    ## role of gap only sites?
+    list_files <- character(length(seqs))
+
+    ## filter out species species without enough individuals (can we do with only 1 )
 
     for (i in seq_along(seqs)) {
 
@@ -146,7 +147,9 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         sub_seq <- apply(sub_seq, 1, function(x) paste0(x, collapse=""))
         sub_seq <- paste0(add_spc, sub_seq)
 
-        output <- file.path(output_dir, paste0(spp_name, ".im"))
+        ## adds the i^th in file name to make unique
+        output <- file.path(output_dir, paste0(spp_name, "_", i, ".im"))
+        list_files[i] <- output
 
         ## line 1: arbitrary text -- getting species names
         cat(spp_name, "\n", file=output)
@@ -170,5 +173,5 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
         ## line 5: sequence data
              cat(sub_seq, sep="\n", file=output, append=TRUE)
     }
-    TRUE
+    list_files[nzchar(list_files)]
 }
