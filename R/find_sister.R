@@ -175,3 +175,12 @@ make_im_file <- function(seqs, pop, output_dir="data/im_files",
     }
     list_files[nzchar(list_files)]
 }
+
+make_infile <- function(im_files, dest) {
+    im_files <- strsplit(im_files, "/")
+    im_files <- sapply(im_files, function(x) {
+        x[length(x)]
+    })
+    cat(im_files, sep="\n", file=dest)
+}
+
