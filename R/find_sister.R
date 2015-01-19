@@ -41,20 +41,17 @@ rm_duplicate_seq <- function(sis_seq) {
 
 is_arabia <- function(sis_seq, cukeDB) {
 
-    res <- lapply(sis_seq, function(x) {
-        uniqStr <- gsub("_t_", "_", names(x))
-        mtch <- match(gsub("_[0-9]+amb$", "", names(x)), cukeDB$Labels)
-        latlong <- cukeDB[mtch, c("decimalLatitude", "decimalLongitude")]
-        ## Red Sea + Gulf of Aden polygon corners:
-        ## lat: 30 -- long: 30
-        ## lat: 3  -- long: 62
-        isara <- ifelse(latlong$decimalLatitude > 3 & latlong$decimalLatitude < 30 &
-                            latlong$decimalLongitude > 30 & latlong$decimalLongitude < 100,
-                        "arabia", "outside")
-        isara[grep("^QUERY", names(x))] <- "arabia"
-        isara
-    })
-    res
+    uniqStr <- gsub("_t_", "_", names(sis_seq))
+    mtch <- match(gsub("_[0-9]+amb$", "", names(sis_seq)), cukeDB$Labels)
+    latlong <- cukeDB[mtch, c("decimalLatitude", "decimalLongitude")]
+    ## Red Sea + Gulf of Aden polygon corners:
+    ## lat: 30 -- long: 30
+    ## lat: 3  -- long: 62
+    isara <- ifelse(latlong$decimalLatitude > 3 & latlong$decimalLatitude < 30 &
+                        latlong$decimalLongitude > 30 & latlong$decimalLongitude < 100,
+                    "arabia", "outside")
+    isara[grep("^QUERY", names(sis_seq))] <- "arabia"
+    isara
 }
 
 make_im_file <- function(seqs, pop, output_dir="data/im_files",
