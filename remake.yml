@@ -24,7 +24,7 @@ targets:
       - im_files
       - data/im_files/infile.list
       - data/im_files/batch.masterIn.fromIM
-      - data/im_files/check_labels.pdf
+      - tmp/check_labels.pdf
 
   list_sister_with_dup:
     command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
@@ -57,5 +57,6 @@ targets:
     command: run_convertIM()
 
   data/im_files/check_labels.pdf:
+  tmp/check_labels.pdf:
     command: check_tree_labels(im_files, tree_file="data/raxml-epa-input/RAxML_labelledTree.epaTest",
-                               dest="data/im_files/check_labels.pdf")
+                               dest="tmp/check_labels.pdf")
