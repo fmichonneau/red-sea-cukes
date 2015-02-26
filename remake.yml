@@ -43,9 +43,12 @@ targets:
     command: load_echinoDB(file="data/raw/MARBoL_Echinos_VIII_2013.csv")
     ## command: load_echinoDB(file="data/raw/20141812.MARBoL_Echinos_current.csv")
 
+  cukeAlg:
+    command: read_alg_file(alg_file="data/raxml-epa-input/epa-input.phy")
+
   im_files:
     command: make_im_file(seqs=list_sister,
-                          alg_file="data/raxml-epa-input/epa-input.phy",
+                          alg=cukeAlg,
                           cukeDB=cukeDB, to_ignore_file="data/species_to_ignore.txt",
                           to_add_file="data/species_to_add.txt")
 
