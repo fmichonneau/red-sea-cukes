@@ -59,7 +59,10 @@ targets:
     depends: data/im_files/infile.list
     command: run_convertIM()
 
-  data/im_files/check_labels.pdf:
+  data/im_files/obsSS.txt:
+    depends: data/im_files/batch.masterIn.fromIM
+    command: make_obsSS()
+
   tmp/check_labels.pdf:
     command: check_tree_labels(im_files, tree_file="data/raxml-epa-input/RAxML_labelledTree.epaTest",
                                dest="tmp/check_labels.pdf")

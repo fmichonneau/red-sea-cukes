@@ -237,3 +237,9 @@ check_tree_labels <- function(im_files, tree_file, dest) {
 run_convertIM <- function(infile="infile.list", wd="data/im_files") {
     system(paste0("cd ", wd, ";", "convertIM.pl ", infile))
 }
+make_obsSS <- function(batch_file="batch.masterIn.fromIM",
+                       output="obsSS.txt", wd="data/im_files") {
+    system(paste("cd", wd, ";",
+                 "obsSumStats.pl -T obsSS.table", batch_file,
+                 "> ", output))
+}
