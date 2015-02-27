@@ -199,9 +199,16 @@ make_im_file <- function(seqs, output_dir="data/im_files", cukeDB) {
 
         sub_seq <- seqs[[i]][["sequences"]]
         tree_labels[[i]] <- dimnames(sub_seq)[[1]]
-        sub_pop <- seqs[[i]][["populations"]]
-        pop_sizes <- as.numeric(table(sub_pop)[get_pop_names(sub_pop)])
 
+        sub_pop <- seqs[[i]][["populations"]]
+        pop_names <- get_pop_names(sub_pop)
+        pop_sizes <- as.numeric(table(sub_pop)[pop_names])
+
+        ## reorder the sequences
+        sub_seq <- sub_seq[c(which(sub_pop == pop_names[1]), # to reorder the sequences
+                             which(sub_pop == pop_names[2])), ]
+        sub_pop <- sub_pop[c(which(sub_pop == pop_names[1]), # to reorder the sequences
+                             which(sub_pop == pop_names[2]))]
         loc_length <- dim(sub_seq)[2]
 
         ## extract species name for 1 line of file and file name
