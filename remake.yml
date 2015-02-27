@@ -22,6 +22,7 @@ targets:
   data:
     depends:
       - im_files
+      - nxs_files
       - data/im_files/infile.list
       - data/im_files/batch.masterIn.fromIM
       - tmp/check_labels.pdf
@@ -46,11 +47,16 @@ targets:
   cukeAlg:
     command: read_alg_file(alg_file="data/raxml-epa-input/epa-input.phy")
 
+  sequences:
+    command: extract_sequences(seqs=list_sister, alg=cukeAlg, cukeDB=cukeDB,
+                               to_ignore_file="data/species_to_ignore.txt",
+                               to_add_file="data/species_to_add.txt")
+
+  nxs_files:
+    command: make_nexus_files(seqs=sequences, cukeDB=cukeDB)
+
   im_files:
-    command: make_im_file(seqs=list_sister,
-                          alg=cukeAlg,
-                          cukeDB=cukeDB, to_ignore_file="data/species_to_ignore.txt",
-                          to_add_file="data/species_to_add.txt")
+    command: make_im_file(seqs=sequences, cukeDB=cukeDB)
 
   data/im_files/infile.list:
     command: make_infile(im_files, dest=target_name)
