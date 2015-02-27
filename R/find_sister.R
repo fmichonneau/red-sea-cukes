@@ -62,7 +62,7 @@ read_alg_file <- function(alg_file) {
 }
 
 get_pop_names <- function(pop) {
-    sort(na.omit(unique(pop)))
+    sort(unique(pop))
 }
 
 
