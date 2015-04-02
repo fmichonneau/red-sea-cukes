@@ -29,23 +29,29 @@ targets:
 
   list_sister_with_dup:
     command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
+    cleanup_level: purge
 
   list_sister:
     command: rm_duplicate_seq(list_sister_with_dup)
+    cleanup_level: purge
 
   cukeDB:
     command: load_cukeDB(cukeDB_noLabels)
+    cleanup_level: purge
 
   cukeDB_noLabels:
     command: load_cukeDB_noLabels(echinoDB)
+    cleanup_level: purge
 
   ## using the old version so it matches what's in the tree
   echinoDB:
     command: load_echinoDB(file="data/raw/MARBoL_Echinos_VIII_2013.csv")
     ## command: load_echinoDB(file="data/raw/20141812.MARBoL_Echinos_current.csv")
+    cleanup_level: purge
 
   cukeAlg:
     command: read_alg_file(alg_file="data/raxml-epa-input/epa-input.phy")
+    cleanup_level: purge
 
   sequences:
     command: extract_sequences(seqs=list_sister, alg=cukeAlg, cukeDB=cukeDB,
