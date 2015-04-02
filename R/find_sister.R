@@ -65,7 +65,6 @@ get_pop_names <- function(pop) {
     sort(unique(pop))
 }
 
-
 check_sequences <- function(seqs) {
 
     to_keep <- sapply(seqs, function(seq) {
@@ -287,11 +286,7 @@ make_im_file <- function(seqs, output_dir="data/im_files", cukeDB) {
 }
 
 make_infile <- function(im_files, dest) {
-    im_files <- strsplit(im_files, "/")
-    im_files <- sapply(im_files, function(x) {
-        x[length(x)]
-    })
-    cat(im_files, sep="\n", file=dest)
+    cat(basename(im_files), sep="\n", file=dest)
 }
 
 check_tree_labels <- function(im_files, tree_file, dest) {
