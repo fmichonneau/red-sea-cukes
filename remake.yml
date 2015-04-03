@@ -25,6 +25,8 @@ targets:
       - nxs_files
       - data/im_files/infile.list
       - data/im_files/batch.masterIn.fromIM
+      - data/im_files/infile-gt3.list
+      - data/im_files/batch.masterIn.fromIM.gt3
       - tmp/check_labels.pdf
 
   list_sister_with_dup:
@@ -67,9 +69,14 @@ targets:
   data/im_files/infile.list:
     command: make_infile(im_files, dest=target_name)
 
+  data/im_files/infile-gt3.list:
+    command: make_infile(im_files, dest=target_name, min_n_ind=3)
+
   data/im_files/batch.masterIn.fromIM:
-    depends: data/im_files/infile.list
-    command: run_convertIM()
+    command: run_convertIM(infile="data/im_files/infile.list", outfile=target_name)
+
+  data/im_files/batch.masterIn.fromIM.gt3:
+    command: run_convertIM(infile="data/im_files/infile-gt3.list", outfile=target_name)
 
   data/im_files/obsSS.txt:
     depends: data/im_files/batch.masterIn.fromIM

@@ -285,7 +285,23 @@ make_im_file <- function(seqs, output_dir="data/im_files", cukeDB) {
     res
 }
 
-make_infile <- function(im_files, dest) {
+get_npop <- function(file) {
+    fcon <- readLines(file)
+    fcon <- fcon[-(1:4)]
+    fcon <- sapply(fcon,  function(x) substr(x, 1, 10))
+    fcon <- unname(gsub("\\s+$", "",  fcon))
+    table(sapply(fcon,  function(x) substr(x, nchar(x), nchar(x))))
+}
+
+make_infile <- function(im_files, dest, min_n_ind) {
+    if (! missing(min_n_ind)) {
+        too_few <- lapply(im_files, function(x) {
+                              np <- get_npop(x)
+                              all(np >= min_n_ind)
+                          })
+        too_few <- unlist(too_few)
+        im_files <- im_files[too_few]
+    }
     cat(basename(im_files), sep="\n", file=dest)
 }
 
@@ -312,12 +328,15 @@ check_tree_labels <- function(im_files, tree_file, dest) {
     TRUE
 }
 
-run_convertIM <- function(infile="infile.list", wd="data/im_files") {
-    system(paste0("cd ", wd, ";", "convertIM.pl ", infile))
+run_convertIM <- function(infile, outfile, wd="data/im_files") {
+    outfile <- basename(outfile)
+    infile <- basename(infile)
+    cmd <- paste("cd", wd, ";", "convertIM.pl", "-o", outfile, infile)
+    message(cmd)
+    system(cmd)
 }
 
-make_obsSS <- function(batch_file="batch.masterIn.fromIM",
-                       output="obsSS.txt", wd="data/im_files") {
+make_obsSS <- function(batch_file,  output="obsSS.txt", wd="data/im_files") {
     system(paste("cd", wd, ";",
                  "obsSumStats.pl -T obsSS.table", batch_file,
                  "> ", output))
