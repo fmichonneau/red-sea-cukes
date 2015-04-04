@@ -2,6 +2,7 @@ sources:
   - R/genFasta.R
   - R/find_sister.R
   - R/load_cukeDB.R
+  - R/analyze_beast_trees.R
 
 packages:
   - ape
@@ -13,6 +14,9 @@ packages:
   - maps
   - sp
   - rgeos
+  - magrittr
+  - phyloch
+  - dplyr
 
 targets:
   all:
@@ -28,6 +32,7 @@ targets:
       - data/im_files/infile-gt3.list
       - data/im_files/batch.masterIn.fromIM.gt3
       - tmp/check_labels.pdf
+      - summary_beast_trees
 
   list_sister_with_dup:
     command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
@@ -85,3 +90,9 @@ targets:
   tmp/check_labels.pdf:
     command: check_tree_labels(im_files, tree_file="data/raxml-epa-input/RAxML_labelledTree.epaTest",
                                dest="tmp/check_labels.pdf")
+
+  get_beast_trees:
+    command: read_beast_trees()
+
+  summary_beast_trees:
+    command: summary_nodes(get_beast_trees)
