@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood" version="2.0">
+
+
+    <data
+id="Sclerodactylidae"
+name="alignment">
+                    <sequence id="seq_RS_Ohshimella_ehrenbergii_Oman__UF_4234_arabia_spp1" taxon="RS_Ohshimella_ehrenbergii_Oman__UF_4234_arabia_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcctagcgtcagcaagagtagaaagaggtgtaggaacaggatgaacaatatatccacccttatcaagaaaaatagcccacgcaggtggatccgtagacttagccatattttctctccacttagcaggtgcttcttcaatcctagcctcaataaactttataaccactataataaacatgcgatcaccaggaataagatttgaccgcctccccctatttatttgatccgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataaccatgcttctaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattctttggccacccagaagtttacatcctcattctcccaggatttggtatgatatctcatgtcgttgcccactatagtggaaagcaagaacccttcggatacctaggaatggtctacgcaatggtagccatcggaatacta---------------------------------------------------------"/>
+                    <sequence id="seq_RS_Ohshimella_ehrenbergii_Oman__UF_4209_arabia_spp1" taxon="RS_Ohshimella_ehrenbergii_Oman__UF_4209_arabia_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagccccagatatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcctagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatatccacccttatcaagaaaaatagcccacgcaggtggatccgtagacttagccatattttctctccacttagcaggtgcttcttcaatcctagcctcaataaactttataaccactataataaacatgcgatcaccaggaataagatttgaccgcctccccctatttatttgatccgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataaccatgcttctaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattctttggccacccagaagtttacatcctcattctcccaggatttggtatgatatctcatgtcgttgcccactatagtggaaagcaagaacccttcggatacctaggaatggtctacgcaatggtagccatcggaatactaggattcctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_RS_Ohshimella_ehrenbergii_Oman__UF_1114_arabia_spp1" taxon="RS_Ohshimella_ehrenbergii_Oman__UF_1114_arabia_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggatttggaaactgattaatccccctaatgataggagccccagatatggccttcccacgaatgaaaaaaatgagattctgactcatccccccatccttcatcctactcctagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatatccacccttatcaagaaaaatagcccacgcaggtggatccgtagacttagccatattttctctccacttagcaggtgcttcttcaatcctagcctcaataaactttataaccactataataaacatgcgatcaccaggaataagatttgaccgcctccccctatttatttgatccgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataaccatgcttctaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattctttggccacccagaagtttacatcctcattctcccaggatttggtatgatatctcatgtcgttgctcactatagtggaaagcaagaacccttcggatacctaggaatggtctacgcaatggtagccatcggaatacta---------------------------------------------------------"/>
+                    <sequence id="seq_RS_Ohshimella_ehrenbergii_Oman__UF_4152_arabia_spp1" taxon="RS_Ohshimella_ehrenbergii_Oman__UF_4152_arabia_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagccccagatatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcctagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacccttatcaagaaaaatagcccacgcaggtggatccgtagacttagccatattttctctccacttagcaggtgcttcttcaatcctagcctcaataaactttataaccactataataaacatgcgatcaccaggaataagatttgaccgcctccccctatttatttgatccgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataaccatgcttctaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattctttggccacccagaagtttacatcctcattctcccaggatttggtatgatatctcatgtcgttgcccactatagtggaaagcaagaacccttcggatacctaggaatggtctacgcaatggtagccatcggaatactaggattcctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7401_7401_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7401_7401_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattctttggccacccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttgggtacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7511_7511_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7511_7511_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccatcggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Eparses_UF9304_9304_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Eparses_UF9304_9304_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaataataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccacgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7514_7514_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7514_7514_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccctctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttattacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7515_7515_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7515_7515_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttattacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattctttgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7491_7491_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7491_7491_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccctctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatcagtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7402_7402_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7402_7402_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggatttggaaactgattaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcatcctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7580_7580_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7580_7580_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgactaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcctcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccaggaataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7403_7403_t_7403_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7403_7403_t_7403_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccctctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggcggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactacttagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7566_7566_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7566_7566_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccaggaataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactacttagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Reunion_UF6423_6423_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Reunion_UF6423_6423_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ctgattaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactacttagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7585_7585_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7585_7585_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagctccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctatttcaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtttacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7397_7397_outside_spp1" taxon="Sclerodactylidae_Ohshimella_ehrenbergii_Madagascar_UF7397_7397_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggattcggaaactgattaatccccctaatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgactcgtccccccatccttcatcctactcttagcgtcagcaggagtagaaagaggtgtaggaacaggatgaacaatatacccacctttatcaagaaaaatagcccatgcaggtggatccgtagacttagccatattttctctccacttagcaggagcttcttcaatcctagcctcaataaacttcataaccactataataaacatgcgatcaccagggataagatttgaccgtcttcccctattcatttgatctgtatttatcacagccttcctcctactactcagactcccagtcctagcaggagccataactatgcttttaaccgaccgaaaaattaaaacaacattcttcgaccccgcaggcggaggagaccccatcctattccaacacctattctgattcttcggccatccagaagtttacatcctcattctcccaggatttggtatgatatctcacgtcgttgcccactacagtggaaagcaagaaccctttggatacctaggaatggtctacgcaatggtagccattggaatactaggatttctcgtatgagcccac------------------------------------"/>
+                    <sequence id="seq_RS_Cladolabes_bifurcatus_Oman__UF_4225_arabia_spp2" taxon="RS_Cladolabes_bifurcatus_Oman__UF_4225_arabia_spp2" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aatcatgataggaggctttggaaaatgactcataccccttatgataggagccccagacatggccttcccacgaatgaaaaaaatgagattctgacttgtacccccttcatttatactacttctagcctcagcaggagtagaaagaggtgctggaacaggatgaaccatctatcctcccttatcaagaaaaatagcacacgcaggcggctctgttgacctagctatattttcactccatctagcaggagcctcctctatcttagcatcaataaaatttattacaacaattataaaaatgcgagcaccaggagtaagctttgaccgactaccattatttgtatgatcagtatttatcacagccttcctcctactattaagacttccagtcctagcaggagccattaccatgcttctaacagaccgtaacatcaatacaacattctttgacccagcaggaggtggtgatcctatcctattccaacacctattctgattctttggacatcccgaagtctacattctaattcttccaggattcggaatgatttcccacgtaatagcccactacagaggaaagcaagaacccttcggatacttaggaatggtctacgcaatggtagctataggaattctaggattcctagtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Sclerodactylidae_PNG_UF_PNG12-0692_outside_spp2" taxon="Sclerodactylidae_Sclerodactylidae_PNG_UF_PNG12-0692_outside_spp2" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aataatgataggaggtttcggaaaatgacttatacctcttatgataggagctccagacatggccttcccacgaatgaataaaatgagattttgactcgtacccccctcattcatactactcctagcttcagccggagtagaaagaggcgccggaacaggatgaacaatttaccctcctctttcaagaaaaatagcccatgcaggcggttccgtcgacctagccatattctctcttcacctagcaggagcctcctctatcctagcatcaataaaatttatcacaacaattataaaaatgcgagcaccaggagtaagtttcgaccgactacccctattcgtctgatcagtatttatcacagcctttctcttactcctgagactaccagttctagcaggagccatcactatgctactaacagaccgaaatattaacacaacattctttgacccagcaggaggtggagatcccatcttatttcaacacctattctgattttttggccatcccgaagtctacattcttatcctaccaggattcggaatgatttctcacgtaatagcccactacagaggaaagcaagaaccatttggatacctaggaatggtttatgcaatggtagccataggaattctagggttcctagtatgagcccac------------------------------------"/>
+                    <sequence id="seq_Sclerodactylidae_Cladolabes_acicula_Madagascar_UF7577_7577_t_7577_outside_spp2" taxon="Sclerodactylidae_Cladolabes_acicula_Madagascar_UF7577_7577_t_7577_outside_spp2" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------aataatgataggaggtttcggaaaatgacttatacctcttatgataggagctccagacatggccttcccacgaatgaataaaatgagattttgactcgtacccccctcattcatactactcctagcctcagccggagtagaaagaggcgccggaacaggatgaacaatttaccctcctctttcaagaaaaatagcccatgcaggcggttccgtcgacctagccatattctctcttcacctagcaggagcctcctctatcctagcatcaataaaatttatcacaacaattataaaaatgcgagcaccaggagtaagcttcgaccgactacccctattcgtctgatcagtatttatcacagcctttctcttactcctgagactaccagttctagcaggagccatcactatgttactaacagaccgaaatattaacacaacattctttgacccagcaggaggtggagatcccatcttatttcaacacctattctgattttttggccatcccgaagtctacattcttatcctaccaggattcggaatgatttctcacgtaatagcccactacagaggaaagcaagaaccatttggatacctaggaatggtttatgcaatggtagccataggaattctagggttcctagtatgagcccac------------------------------------"/>
+                </data>
+
+
+    
+
+
+    
+
+
+    
+<map name="Uniform">beast.math.distributions.Uniform</map>
+<map name="Exponential">beast.math.distributions.Exponential</map>
+<map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+<map name="Normal">beast.math.distributions.Normal</map>
+<map name="Beta">beast.math.distributions.Beta</map>
+<map name="Gamma">beast.math.distributions.Gamma</map>
+<map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+<map name="prior">beast.math.distributions.Prior</map>
+<map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+<map name="OneOnX">beast.math.distributions.OneOnX</map>
+
+
+<run id="mcmc" spec="MCMC" chainLength="50000000">
+    <state id="state" storeEvery="5000">
+        <tree id="Tree.t:Sclerodactylidae" name="stateNode">
+            <taxonset id="TaxonSet.Sclerodactylidae" spec="TaxonSet">
+                <alignment idref="Sclerodactylidae"/>
+            </taxonset>
+        </tree>
+        <parameter id="birthRate.t:Sclerodactylidae" name="stateNode">1.0</parameter>
+        <parameter id="gammaShape.s:Sclerodactylidae" name="stateNode">1.0</parameter>
+        <parameter id="kappa.s:Sclerodactylidae" lower="0.0" name="stateNode">2.0</parameter>
+        <parameter id="freqParameter.s:Sclerodactylidae" dimension="4" lower="0.0" name="stateNode" upper="1.0">0.25</parameter>
+    </state>
+
+    <init id="RandomTree.t:Sclerodactylidae" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@Tree.t:Sclerodactylidae" taxa="@Sclerodactylidae">
+        <populationModel id="ConstantPopulation0.t:Sclerodactylidae" spec="ConstantPopulation">
+            <parameter id="randomPopSize.t:Sclerodactylidae" name="popSize">1.0</parameter>
+        </populationModel>
+    </init>
+
+    <distribution id="posterior" spec="util.CompoundDistribution">
+        <distribution id="prior" spec="util.CompoundDistribution">
+            <distribution id="YuleModel.t:Sclerodactylidae" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:Sclerodactylidae" tree="@Tree.t:Sclerodactylidae"/>
+            <prior id="YuleBirthRatePrior.t:Sclerodactylidae" name="distribution" x="@birthRate.t:Sclerodactylidae">
+                <Uniform id="Uniform.0" name="distr" upper="Infinity"/>
+            </prior>
+            <prior id="GammaShapePrior.s:Sclerodactylidae" name="distribution" x="@gammaShape.s:Sclerodactylidae">
+                <Exponential id="Exponential.0" name="distr">
+                    <parameter id="RealParameter.0" lower="0.0" name="mean" upper="0.0">1.0</parameter>
+                </Exponential>
+            </prior>
+            <prior id="KappaPrior.s:Sclerodactylidae" name="distribution" x="@kappa.s:Sclerodactylidae">
+                <LogNormal id="LogNormalDistributionModel.0" name="distr">
+                    <parameter id="RealParameter.01" estimate="false" name="M">1.0</parameter>
+                    <parameter id="RealParameter.02" estimate="false" name="S">1.25</parameter>
+                </LogNormal>
+            </prior>
+        </distribution>
+        <distribution id="likelihood" spec="util.CompoundDistribution">
+            <distribution id="treeLikelihood.Sclerodactylidae" spec="TreeLikelihood" data="@Sclerodactylidae" tree="@Tree.t:Sclerodactylidae">
+                <siteModel id="SiteModel.s:Sclerodactylidae" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape.s:Sclerodactylidae">
+                    <parameter id="mutationRate.s:Sclerodactylidae" estimate="false" name="mutationRate">1.0</parameter>
+                    <parameter id="proportionInvariant.s:Sclerodactylidae" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+                    <substModel id="hky.s:Sclerodactylidae" spec="HKY" kappa="@kappa.s:Sclerodactylidae">
+                        <frequencies id="estimatedFreqs.s:Sclerodactylidae" spec="Frequencies" frequencies="@freqParameter.s:Sclerodactylidae"/>
+                    </substModel>
+                </siteModel>
+                <branchRateModel id="StrictClock.c:Sclerodactylidae" spec="beast.evolution.branchratemodel.StrictClockModel">
+                    <parameter id="clockRate.c:Sclerodactylidae" estimate="false" name="clock.rate">0.0152</parameter>
+                </branchRateModel>
+            </distribution>
+        </distribution>
+    </distribution>
+
+    <operator id="YuleBirthRateScaler.t:Sclerodactylidae" spec="ScaleOperator" parameter="@birthRate.t:Sclerodactylidae" scaleFactor="0.75" weight="3.0"/>
+
+    <operator id="treeScaler.t:Sclerodactylidae" spec="ScaleOperator" scaleFactor="0.5" tree="@Tree.t:Sclerodactylidae" weight="3.0"/>
+
+    <operator id="treeRootScaler.t:Sclerodactylidae" spec="ScaleOperator" rootOnly="true" scaleFactor="0.5" tree="@Tree.t:Sclerodactylidae" weight="3.0"/>
+
+    <operator id="UniformOperator.t:Sclerodactylidae" spec="Uniform" tree="@Tree.t:Sclerodactylidae" weight="30.0"/>
+
+    <operator id="SubtreeSlide.t:Sclerodactylidae" spec="SubtreeSlide" tree="@Tree.t:Sclerodactylidae" weight="15.0"/>
+
+    <operator id="narrow.t:Sclerodactylidae" spec="Exchange" tree="@Tree.t:Sclerodactylidae" weight="15.0"/>
+
+    <operator id="wide.t:Sclerodactylidae" spec="Exchange" isNarrow="false" tree="@Tree.t:Sclerodactylidae" weight="3.0"/>
+
+    <operator id="WilsonBalding.t:Sclerodactylidae" spec="WilsonBalding" tree="@Tree.t:Sclerodactylidae" weight="3.0"/>
+
+    <operator id="gammaShapeScaler.s:Sclerodactylidae" spec="ScaleOperator" parameter="@gammaShape.s:Sclerodactylidae" scaleFactor="0.5" weight="0.1"/>
+
+    <operator id="KappaScaler.s:Sclerodactylidae" spec="ScaleOperator" parameter="@kappa.s:Sclerodactylidae" scaleFactor="0.5" weight="0.1"/>
+
+    <operator id="FrequenciesExchanger.s:Sclerodactylidae" spec="DeltaExchangeOperator" delta="0.01" weight="0.1">
+        <parameter idref="freqParameter.s:Sclerodactylidae"/>
+    </operator>
+
+    <logger id="tracelog" fileName="Sclerodactylidae.log" logEvery="5000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="treeLikelihood.Sclerodactylidae"/>
+        <log id="TreeHeight.t:Sclerodactylidae" spec="beast.evolution.tree.TreeHeightLogger" tree="@Tree.t:Sclerodactylidae"/>
+        <log idref="YuleModel.t:Sclerodactylidae"/>
+        <log idref="birthRate.t:Sclerodactylidae"/>
+        <log idref="gammaShape.s:Sclerodactylidae"/>
+        <log idref="kappa.s:Sclerodactylidae"/>
+        <log idref="freqParameter.s:Sclerodactylidae"/>
+    </logger>
+
+    <logger id="screenlog" logEvery="5000">
+        <log idref="posterior"/>
+        <log id="ESS.0" spec="util.ESS" arg="@posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+    </logger>
+
+    <logger id="treelog.t:Sclerodactylidae" fileName="$(tree).trees" logEvery="5000" mode="tree">
+        <log id="TreeWithMetaDataLogger.t:Sclerodactylidae" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:Sclerodactylidae"/>
+    </logger>
+
+</run>
+
+</beast>

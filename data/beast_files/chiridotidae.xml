@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood" version="2.0">
+
+
+    <data
+id="Chiridotidae"
+name="alignment">
+                    <sequence id="seq_RS_Chiridota_sp_5_GP_Saudi_Arabia__UF_13380_arabia_spp1" taxon="RS_Chiridota_sp_5_GP_Saudi_Arabia__UF_13380_arabia_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------cgtgatgataggggggtttggtaaatgattagtccccttgatgattggagctcctgatatggcctttccccgtttaaaaaatatgagtttttggttggtccctccctcttttctcttacttttagcctctgctattgttgagaggggggtaggtactgggtgaacggtttaccctccattgtctggtaaaatagcccatgcgggagcttctgtagatttgggtatcttttcgttgcatcttgctggtgcctcttctattttagcatctataaattttattactactatttataaaatgcgttgttttgggcttcgttgggatcggctacctttgtttgtttggtctatttttatcacttcgtttctgctcctactttcccttccagttctggcaggagccataactatgttattgacggaccgtaatattaatacttctttctttgatcctacaggaggaggagaccctctattatttcaacaccttttttggttttttggtcacccggaggtatacatcttaatactgcccgggtttgggatgatttctcatattgtagctcattattctggtaaggtccagccttttggctacttagggatggtttattcgataatttctatcgggatactaggctttttagtttgagcacac------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Tuamotu_UF619_619_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Tuamotu_UF619_619_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagtccccttgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggttggttcctccctcttttcttttgcttctagcctctgctattgttgagaggggagttggtactgggtgaacagtttatcctccattgtctggtaaaatagctcatgcgggagcttctgtagatttgggtattttctcgttgcatattgctggtgcttcttctattttggcctctataaattttattactactatctataaaatgcgttgttttggacttcgttgggaccggctgcctttatttgtttggtctatctttattacttcttttttgcttttactttctctcccagttttagcgggagctataactatgctattaacggaccgtaatattaatacttccttttttgatcctacaggaggaggagaccctttgttatttcaacatcttttttggttctttgggcacccagaggtttatattttaatactccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtatcctaggtttcttggtttgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Moorea_UF5268_5268_t_5268_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Moorea_UF5268_5268_t_5268_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagttcccttgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcctccctctttccttttgcttctagcctctgctattgttgagaggggggttggtactgggtgaacagtttatcccccattatctggtaaaatagctcatgcgggggcttctgtagatttgggtattttctcgttgcatattgctggtgcttcttctattttggcctctataaattttattactaccatctataaaatgcgttgttttggacttcgctgggaccggttgcctttatttgtttggtctatctttattacttcctttttgcttttactttctctcccagttttagcgggagctataactatgctattaacggaccgtaatattaatacttctttttttgaccctacaggaggaggagaccctttgttatttcaacatcttttctggttctttgggcacccagaggtttatattttaatactccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttccattggtattctaggtttcttggtctgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_sp_4_UF7582_7582_3amb_outside_spp1" taxon="Chiridotidae_Chiridota_sp_4_UF7582_7582_3amb_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------atggttagttcccctgatgataggagctcckgacatrgcctytcctcgtctaaaaaatatgaggttttggctagttcctccttccttcctcttacttttagcttccgctattgttgagaggggggttggtactgggtggacagtttaccctccactatctggtaaaatagctcatgcgggagcttccgtagatttgggtatcttctcgttgcatattgctggtgcttcttctatttcggcctctataaactttattactactatttataaaatgcgttgttttggactccgctgagatcggttgcctttatttgtttggtctatttttattacttctttcttgcttctactttctcttccagtcttagcgggagccataactatgttattaacggaccgtaatattaatacttctttctttgaccctacaggaggaggagaccctttgttatttcaacatcttttttggttttttgggcacccagaggtttatattttaatacttcctgggtttgggatgatttctcatattgtagctcattattctggtaaggtccagccctttgggtacttagggatggtttattctataatttctattggtattctaggtttcctagtttgagctcac------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Lizard_UF8133_8133_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Lizard_UF8133_8133_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------agttatgatagggggttttggtaaatggttagtccccttgatgataggagctcctgacatggcctttcctcgcttaaaaaatatgaggttttggctggttcctccctctttccttttacttctagcttctgctattgttgagaggggggttggtactgggtgaacagtttaccctccattatctggtaaaatagctcatgcgggagcttctgtagacttgggcattttctcattgcatattgctggtgcttcttctatttcggcctctataaattttattactactatctataaaatgcgttgttttggacttcgttgggaccggctgcctttatttgtttggtctatttttattacatcttttttgcttttactttctctcccagtcttagcgggagctataactatgttattaacggatcgtaatattaatacttctttttttgaccctacaggaggaggagaccctttgttatttcaacatcttttttggttctttgggcacccagaggtttatattttaatacttcctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtattctaggtttcctggtttgagctcac------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Lizard_UF8391_8391_1amb_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Lizard_UF8391_8391_1amb_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagttcccttgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcctccctctttccttttacttctagcttctgctattgttgagaggggggttggtactgggtgaacagtttaccctccattatctggtaaaatagctcatgcgggagcttctgtagacttgggcattttctcattgcatattgctggtgcttcttctatttcggcctctataaattttattactactatctataaaatgcgttgttttggacttcgttgggaccggctgcctttatttgtttggtctatttttattacatcttttttgcttttactttctctcccagtcttagcgggagctataactatgttattaacggatcgtaatattaatacctctttttttgaccctaccggaggaggagaccctttgttatttcaacatcttttttggttctttgggcacccagaggtttatattttaatacttcctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccytttgggtacttagggatggtttattctataatttctattggtattctaggtttcctggtttgagctcac------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Madagascar_UF7588_7588A_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Madagascar_UF7588_7588A_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagttcctttgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcctccctctttccttttgcttctagcttctgctattgttgagaggggggttggtactggatgaacagtttaccccccattatctggtaaaatagctcatgcgggagcttctgtagacctgggtattttctcgttgcatattgctggtgcttcttctatttcggcctctataaattttattactaccatctataaaatgcgttgttttggacttcgctgggaccggctgcctttatttgtttggtctatttttattacttcttttttgcttttactttctctcccagtcttagcgggagctataactatgttattaacggaccgtaatattaatacttccttttttgaccctacaggaggaggagaccctttgttatttcaacaccttttttggttctttgggcacccagaggtttatattttgatactccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtattctaggtttcttggtttgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Majuro_UF6764_6764_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Majuro_UF6764_6764_outside_spp1" totalcount="4" value="---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------taaatggttagttcctttgatgacaggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcctccttctttccttttgcttctagcctctgctattgttgagaggggggttggtactgggtgaacagtttaccccccattatctggtaaaatagctcatgcgggagcttctgtagatctgggtattttctcgttgcatattgccggtgcttcttctatttcggcctctataaattttattactaccatctataaaatgcgttgttttgggcttcgctgggaccggctgcctttatttgtttggtctatcttcattacttcttttttgcttctactttctctcccagtcttagcgggagctataactatgctattaacggaccgtaatattaatacttccttttttgaccctacaggaggaggagaccctttgttatttcaacatcttttttggttctttgggcacccagaggtttatattttaatcctccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtattctaggtttcttggtttgagctcatcacatgttcactgtggga------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Moorea_UF5319_5319_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Moorea_UF5319_5319_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagttcctttgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcctccttctttccttttgcttctagcctctgctattgttgagaggggggttggtactgggtgaacagtttaccccccattatctggtaaaatagctcatgcgggagcttctgtagatctgggtattttctcgttgcatattgctggtgcttcttctattttggcctctataaattttattactaccatctataaaatgcgttgttttgggcttcgctgggaccggctgcctttatttgtttggtctatctttattacttcttttttgcttttactttctctcccagtcttagcgggagctataactatgctattaacggaccgtaatattaatacttccttttttgatcctacaggaggaggagaccctttgttattccaacaccttttttggttctttgggcacccagaggtttatattttaatcctccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtattctaggtttcttggtttgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Tuamotu_UF5449_5449A_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Tuamotu_UF5449_5449A_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------tttgatgataggagctcctgacatggccttccctcgcctaaaaaatatgaggttttggctggttcctccttccttccttttgcttctagcctctgctattgttgagaggggggttggtactgggtgaacagtttaccccccattgtctggtaaaatagctcatgcgggagcttctgtagatctgggtattttctcgttgcatattgctggtgcttcttctattttggcctctataaattttattactaccatctataaaatgcgttgttttgggcttcgctgggaccggctgcctttatttgtttggtctatctttattacttcttttttgcttttactttctctcccagtcttagcgggagctataactatgctattaacggaccgtaatattaatacttccttttttgatcctacaggaggaggagaccctttgttattccaacatcttttttggttctttgggcacccagaggtttatattttaatcctccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtattctaggtttcttggtttgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Tuamotu_UF621_621A_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Tuamotu_UF621_621A_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagttcctctgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcctccttctttccttttgcttctagcctctgctattgttgagaggggggttggtactgggtgaacagtttaccccccattatctggtaaaatagctcatgcgggagcttctgtagatctgggtattttctcgttgcatattgctggtgcttcttctattttggcttctataaattttattactaccatctataaaatgcgttgttttgggcttcgctgggaccggctgcctttatttgtttggtctatctttattacttcttttttgcttttactttctctcccagtgttagcgggagctataactatgctattaacggaccgtaatattaatacttccttttttgatcctacaggaggaggagatcctttgttattccaacatcttttttggttctttgggcacccagaggtttatattttaatcctccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtattctaggtttcttggtttgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Moorea_UF620_620A_1amb_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Moorea_UF620_620A_1amb_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagttcctttgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcctccttctttccttttgcttctagcctctgctattgttgagaggggggttggtactgggtgaacagtttaccccccattatctggtaaaatagctcatgcgggagcttctgtagatctgggtattttctcgttgcatattgctggtgcttcttctattttggcttctataaattttattactaccatctataaaatgcgttgttttgggcttcgctgggaccggctgcctttatttgtttggtctatctttattacttcttttttgcttttactttctctcccagtgttagcgggagctataactatgctattaacggaccgtaatattaatacttccttttttgatcctacaggaggaggagatcctttgttattccaacatcttttttggttctttgggcacccagaggtttatattttaatcctccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccytttgggtacttagggatggtttattctataatctctattggtattctaggtttcttggtttgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Moorea_UF5351_5351_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Moorea_UF5351_5351_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagttcctttgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcccccttctttccttttgcttctagcctctgctattgttgagaggggggttggtactgggtgaacagtttaccccccattatctggtaaaatagctcatgcgggagcttctgtagatctgggtattttctcgttgcatattgctggtgcttcttctattttggcctctataaattttattactaccatctataaaatgcgttgttttgggcttcgctgggaccggctgcctttatttgtttggtctatctttattacttcttttttgcttttactttctctcccagtcttagcgggagctataactatgctattaacggaccgtaatattaatacttccttttttgatcctacaggaggaggagaccctttgttattccaacatcttttttggttctttgggcacccagaggtttatattttaatcctccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtattctaggtttcttggtttgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_stuhlmanni_Madagascar_UF7523_7523_outside_spp1" taxon="Chiridotidae_Chiridota_stuhlmanni_Madagascar_UF7523_7523_outside_spp1" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------ggttatgatagggggttttggtaaatggttagttcccttgatgataggagctcctgacatggcctttcctcgcctaaaaaatatgaggttttggctggttcctccttctttccttttgcttctagcctctgctattgttgagaggggggttggtactggatgaacagtttaccccccattatctggtaaaatagcccatgcgggagcttctgtagatctgggtattttctcgttgcatattgctggtgcttcttctatttcggcctctataaattttattactaccatctataaaatgcgttgttttgggctccgctgggaccggctgcctttatttgtttggtctatctttattacttcttttttgcttttactttctctcccagtcttagcgggagctataactatgctattaacggaccgtaatattaatacttccttttttgaccctacaggaggaggagaccctttgttatttcaacatcttttttggttctttgggcacccagaggtttatattttaatactccctgggtttgggatgatttctcatattgtagctcattattctggtaaggttcagccttttgggtacttagggatggtttattctataatttctattggtattctaggtttcttggtttgagctcat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_rigida_Guam_UF7120_7120_outside_spp2" taxon="Chiridotidae_Chiridota_rigida_Guam_UF7120_7120_outside_spp2" totalcount="4" value="---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------gaattggttagttcccttgatgataggtgctcctgacatggctttccctcgtatgaataatatgaggttttggttagttccgccttctttccttcttcttttagcttcttctgtggttgagaggggagtgggaactggttggaccgtttatcctcctctgtctgggaatatagcacatgctggagcttccgttgatttgggtatcttctcgttgcacttggctggtgcgtcttctatattggcttctataaaattcataacaactatttataatatgcgttgttttgggcttcgctgggaccgtcttccgttatttgtctggtccattcttattacttccttcttattacttctatcccttccagtcttggcgggtgccattactatgcttttaacagatcggaatataaacacttctttttttgatcctgttggtgggggggatcctcttctattccaacatcttttctggttttttggtcatccggaggtttatattctaattctccctggtttcggtatgatttcccatatcgttgcgcactattctgggaaggttcaaccttttgggtatttgggtatggtatattcaataatctctataggggtactagggttccttgtctgggcacatcatatgtttacggttggt------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_rigida_Guam_UF6738_6738_outside_spp2" taxon="Chiridotidae_Chiridota_rigida_Guam_UF6738_6738_outside_spp2" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------agtaatgataggtggttttgggaattggttagttcccttgatgataggtgctcctgacatggctttccctcgtatgaataatatgaggttttggttagttccgccttctttccttcttcttttagcttcttctgtggttgagaggggagtgggaactggttggaccgtttatcctcctctgtctgggaatatagcacatgctggagcttccgttgatttgggtatcttctcgttgcacttggctggtgcgtcttctatattggcttctataaaattcataacaactatttataatatgcgttgttttgggcttcgctgggaccgtcttccgttatttgtctggtccattcttattacttccttcttattacttctatcccttccagtcttggcgggtgccattactatgcttttaacagatcggaatataaacacttctttttttgatcctgttggtgggggggatcctcttctattccaacatcttttctggttttttggtcatccggaggtttatattctaattctccctggtttcggtatgatttcccatatcgttgcgcactattctgggaaggttcaaccttttgggtatttgggtatggtatattcaataatctctataggggtactagggttccttgtctggg-----------------------------------------"/>
+                    <sequence id="seq_RS_Chiridota_rigida_RedSea__UF_STA8_arabia_spp2" taxon="RS_Chiridota_rigida_RedSea__UF_STA8_arabia_spp2" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------agtaatgataggtggttttgggaattggttagttcccttgatgataggtgctcctgacatggctttccctcgtatgaataatatgaggttttggttagttccgccttctttccttcttcttttagcttcttctgtggttgagaggggagtgggaactggttggaccgtttatcctcctctgtctgggaatatagcacatgctggagcttccgttgatttgggtatcttctcgttgcacttggctggtgcgtcttctatattggcttctataaaattcataacaactatttataatatgcgttgttttgggcttcgcttggaccgtcttccgttatttgtctggtccattcttattacttccttcttattacttctatcccttccagtcttggcgggtgccattactatgcttttaacagatcggaatataaacacttctttctttgatcctgttggtgggggggatcctcttctattccaacatcttttctggttttttggtcatccggaggtttatattctaattcttcctggtttcggtatgatttcccatatcgttgcgcactattctgggaaggttcaaccttttgggtatttgggtatggtatattcaataatctctataggggtactagggttccttgtctgggcacat------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_rigida_Moorea_UF5303_5303_outside_spp2" taxon="Chiridotidae_Chiridota_rigida_Moorea_UF5303_5303_outside_spp2" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------agtaatgataggtggttttgggaattggttagttcccttgatgataggtgctcctgacatggctttccctcgtatgaataatatgaggttttggttagttccgccttctttccttcttcttttagcttcttctgtggttgagaggggagtgggaactggttggaccgtttatcctcctctgtctgggaatatagcacatgctggagcttccgttgatttgggtatcttctcgttgcacttggctggtgcgtcttctatattggcttctataaaattcataacaactatttataatatgcgttgttttgggcttcgctgggaccgtcttccgttatttgtctggtccattcttattacttccttcttattacttctatcccttccagtcttggcgggtgccattactatgcttttaacagatcggaatataaacacttctttctttgatcctgttggtgggggggatcctcttctattccaacatcttttctggttttttggtcatccggaggtttatattctaattctccctggtttcggtatgatttcccatatcgttgcgcactattctgggaaggatcaacctgtgggtatttgggtatggtatattct-------------------------------------------------------------------------------"/>
+                    <sequence id="seq_Chiridotidae_Chiridota_kermadeca_KermadecIslands_AMJ24971_MOLAF_1266_outside_spp3" taxon="Chiridotidae_Chiridota_kermadeca_KermadecIslands_AMJ24971_MOLAF_1266_outside_spp3" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------agtcatgataggagggtttgggaattggttggtgcccctaatgataggggcccctgatatggctttccctcggatgaaaaatatgaggttctggctggttcctccttccttcctccttctcctggcttcagcagtcgtggaaagtggtgtgggtactggttggactgtatatcccccactctccggtaatatagctcacgctggggcttctgttgacttaggtattttctccttacaccttgcgggggcttcttccatattggcatccataaattttataactacgatatataatatgcgttgcttcgggctacggtgggatcgactccctctctttgtgtggtctatttttgttacttcttttttacttcttctatctcttccggttctggctggtgctataactatgttactaacggaccgtaacataaatacttccttcttcgatccaacggggggtggggaccctcttttattccaacacctattctggtttttcgggcacccggaggtttatattttaatccttcctggttttggaatgatctctcatgtagttgctcattattccggtaaggttcagcctttaggctacttaggga-----------------------------------------------------------------------------------------"/>
+                    <sequence id="seq_RS_Chiridota_sp_8_GP_Red_Sea__UF_14240_arabia_spp3" taxon="RS_Chiridota_sp_8_GP_Red_Sea__UF_14240_arabia_spp3" totalcount="4" value="------------------------------------------------------------------------------------------------------------------------------------------------------------------------cgtcatgatagggggtttcggtaattgactggtacccttgatgataggcgctcctgatatggcttttcctcgtatgaaaaatatgaggttttggttagttccgccctctttccttcttctcttggcatctgctgttgttgagagtggtgtgggaactggttgaaccgtttatccacctctttccggaaaaatagcccacgctggagcttcggtagatctaggtattttttccttacatctagctggtgcctcttctattttagcttcgataaatttcataactactatatataatatgcgttgctttgggctccgctgagaccgtcttcctctttttgtatggtctattttcgttacttcttttttattgctcctctccttacctgttctggcgggggcaataactatgctcctcacagaccgcaatatcaatacttcttttttcgatcccactgggggaggggatccgttgttgtttcaacatctcttctggtttttcgggcatccggaggtttatatcctgattttacctggttttggtatgatctctcatatagttgctcattattccggaaaggttcaacctttcggctatttgggtatggtttacccaataatttctattggtattttaggctttctcgtttgagctcac------------------------------------"/>
+                </data>
+
+
+    
+
+
+    
+
+
+    
+<map name="Uniform">beast.math.distributions.Uniform</map>
+<map name="Exponential">beast.math.distributions.Exponential</map>
+<map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+<map name="Normal">beast.math.distributions.Normal</map>
+<map name="Beta">beast.math.distributions.Beta</map>
+<map name="Gamma">beast.math.distributions.Gamma</map>
+<map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+<map name="prior">beast.math.distributions.Prior</map>
+<map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+<map name="OneOnX">beast.math.distributions.OneOnX</map>
+
+
+<run id="mcmc" spec="MCMC" chainLength="50000000">
+    <state id="state" storeEvery="5000">
+        <tree id="Tree.t:Chiridotidae" name="stateNode">
+            <taxonset id="TaxonSet.Chiridotidae" spec="TaxonSet">
+                <alignment idref="Chiridotidae"/>
+            </taxonset>
+        </tree>
+        <parameter id="birthRate.t:Chiridotidae" name="stateNode">1.0</parameter>
+        <parameter id="gammaShape.s:Chiridotidae" name="stateNode">1.0</parameter>
+        <parameter id="kappa.s:Chiridotidae" lower="0.0" name="stateNode">2.0</parameter>
+        <parameter id="freqParameter.s:Chiridotidae" dimension="4" lower="0.0" name="stateNode" upper="1.0">0.25</parameter>
+    </state>
+
+    <init id="RandomTree.t:Chiridotidae" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@Tree.t:Chiridotidae" taxa="@Chiridotidae">
+        <populationModel id="ConstantPopulation0.t:Chiridotidae" spec="ConstantPopulation">
+            <parameter id="randomPopSize.t:Chiridotidae" name="popSize">1.0</parameter>
+        </populationModel>
+    </init>
+
+    <distribution id="posterior" spec="util.CompoundDistribution">
+        <distribution id="prior" spec="util.CompoundDistribution">
+            <distribution id="YuleModel.t:Chiridotidae" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:Chiridotidae" tree="@Tree.t:Chiridotidae"/>
+            <prior id="YuleBirthRatePrior.t:Chiridotidae" name="distribution" x="@birthRate.t:Chiridotidae">
+                <Uniform id="Uniform.0" name="distr" upper="Infinity"/>
+            </prior>
+            <prior id="GammaShapePrior.s:Chiridotidae" name="distribution" x="@gammaShape.s:Chiridotidae">
+                <Exponential id="Exponential.0" name="distr">
+                    <parameter id="RealParameter.0" lower="0.0" name="mean" upper="0.0">1.0</parameter>
+                </Exponential>
+            </prior>
+            <prior id="KappaPrior.s:Chiridotidae" name="distribution" x="@kappa.s:Chiridotidae">
+                <LogNormal id="LogNormalDistributionModel.0" name="distr">
+                    <parameter id="RealParameter.01" estimate="false" name="M">1.0</parameter>
+                    <parameter id="RealParameter.02" estimate="false" name="S">1.25</parameter>
+                </LogNormal>
+            </prior>
+        </distribution>
+        <distribution id="likelihood" spec="util.CompoundDistribution">
+            <distribution id="treeLikelihood.Chiridotidae" spec="TreeLikelihood" data="@Chiridotidae" tree="@Tree.t:Chiridotidae">
+                <siteModel id="SiteModel.s:Chiridotidae" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape.s:Chiridotidae">
+                    <parameter id="mutationRate.s:Chiridotidae" estimate="false" name="mutationRate">1.0</parameter>
+                    <parameter id="proportionInvariant.s:Chiridotidae" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+                    <substModel id="hky.s:Chiridotidae" spec="HKY" kappa="@kappa.s:Chiridotidae">
+                        <frequencies id="estimatedFreqs.s:Chiridotidae" spec="Frequencies" frequencies="@freqParameter.s:Chiridotidae"/>
+                    </substModel>
+                </siteModel>
+                <branchRateModel id="StrictClock.c:Chiridotidae" spec="beast.evolution.branchratemodel.StrictClockModel">
+                    <parameter id="clockRate.c:Chiridotidae" estimate="false" name="clock.rate">0.0152</parameter>
+                </branchRateModel>
+            </distribution>
+        </distribution>
+    </distribution>
+
+    <operator id="YuleBirthRateScaler.t:Chiridotidae" spec="ScaleOperator" parameter="@birthRate.t:Chiridotidae" scaleFactor="0.75" weight="3.0"/>
+
+    <operator id="treeScaler.t:Chiridotidae" spec="ScaleOperator" scaleFactor="0.5" tree="@Tree.t:Chiridotidae" weight="3.0"/>
+
+    <operator id="treeRootScaler.t:Chiridotidae" spec="ScaleOperator" rootOnly="true" scaleFactor="0.5" tree="@Tree.t:Chiridotidae" weight="3.0"/>
+
+    <operator id="UniformOperator.t:Chiridotidae" spec="Uniform" tree="@Tree.t:Chiridotidae" weight="30.0"/>
+
+    <operator id="SubtreeSlide.t:Chiridotidae" spec="SubtreeSlide" tree="@Tree.t:Chiridotidae" weight="15.0"/>
+
+    <operator id="narrow.t:Chiridotidae" spec="Exchange" tree="@Tree.t:Chiridotidae" weight="15.0"/>
+
+    <operator id="wide.t:Chiridotidae" spec="Exchange" isNarrow="false" tree="@Tree.t:Chiridotidae" weight="3.0"/>
+
+    <operator id="WilsonBalding.t:Chiridotidae" spec="WilsonBalding" tree="@Tree.t:Chiridotidae" weight="3.0"/>
+
+    <operator id="gammaShapeScaler.s:Chiridotidae" spec="ScaleOperator" parameter="@gammaShape.s:Chiridotidae" scaleFactor="0.5" weight="0.1"/>
+
+    <operator id="KappaScaler.s:Chiridotidae" spec="ScaleOperator" parameter="@kappa.s:Chiridotidae" scaleFactor="0.5" weight="0.1"/>
+
+    <operator id="FrequenciesExchanger.s:Chiridotidae" spec="DeltaExchangeOperator" delta="0.01" weight="0.1">
+        <parameter idref="freqParameter.s:Chiridotidae"/>
+    </operator>
+
+    <logger id="tracelog" fileName="Chiridotidae.log" logEvery="5000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="treeLikelihood.Chiridotidae"/>
+        <log id="TreeHeight.t:Chiridotidae" spec="beast.evolution.tree.TreeHeightLogger" tree="@Tree.t:Chiridotidae"/>
+        <log idref="YuleModel.t:Chiridotidae"/>
+        <log idref="birthRate.t:Chiridotidae"/>
+        <log idref="gammaShape.s:Chiridotidae"/>
+        <log idref="kappa.s:Chiridotidae"/>
+        <log idref="freqParameter.s:Chiridotidae"/>
+    </logger>
+
+    <logger id="screenlog" logEvery="5000">
+        <log idref="posterior"/>
+        <log id="ESS.0" spec="util.ESS" arg="@posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+    </logger>
+
+    <logger id="treelog.t:Chiridotidae" fileName="$(tree).trees" logEvery="5000" mode="tree">
+        <log id="TreeWithMetaDataLogger.t:Chiridotidae" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:Chiridotidae"/>
+    </logger>
+
+</run>
+
+</beast>
