@@ -14,7 +14,7 @@ find_sister <- function(tree = "data/raxml-epa-input/RAxML_labelledTree.epaTest"
         while(TRUE) {
             anc_node <- ancestor(tr, cur_node)
             chi_node <- children(tr, anc_node)
-            check_nds <- descendants(tr, chi_node[chi_node != cur_node])
+            check_nds <- phylobase::descendants(tr, chi_node[chi_node != cur_node])
             if (length(check_nds) > 1 &&
                 length(grep("^QUERY", names(check_nds))) == 0) {
                 break
@@ -22,7 +22,7 @@ find_sister <- function(tree = "data/raxml-epa-input/RAxML_labelledTree.epaTest"
                 cur_node <- anc_node
             }
         }
-        res[[i]] <- descendants(tr, anc_node)
+        res[[i]] <- phylobase::descendants(tr, anc_node)
     }
     res[!duplicated(res)]
 }
