@@ -22,6 +22,7 @@ targets:
   all:
     depends:
       - data
+      - plots
 
   data:
     depends:
@@ -33,6 +34,11 @@ targets:
       - data/im_files/batch.masterIn.fromIM.gt3
       - tmp/check_labels.pdf
       - summary_beast_trees
+
+  plots:
+    depends:
+      - node_plot_endemics.pdf
+      - node_plot_small_samples.pdf
 
   list_sister_with_dup:
     command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
@@ -96,3 +102,24 @@ targets:
 
   summary_beast_trees:
     command: summary_nodes(get_beast_trees)
+
+  all_node_data:
+    command: get_all_node_data(summary_beast_trees)
+
+  node_data_endemics:
+    command: get_node_data_endemics(all_node_data)
+
+  node_plot_endemics.pdf:
+    command: plot_nodes(node_data_endemics)
+    plot:
+      width: 10
+      height: 4
+
+  node_data_small_samples:
+    command: get_node_data_small_samples(all_node_data)
+
+  node_plot_small_samples.pdf:
+    command: plot_nodes(node_data_small_samples)
+    plot:
+      width: 10
+      height: 4

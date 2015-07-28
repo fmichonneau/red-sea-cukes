@@ -103,59 +103,62 @@ summary_nodes <- function(trees) {
     nd_data
 }
 
-if (FALSE) {
 
-node_data_common <- fetch("summary_beast_trees") %>%
-    mutate(n_ot = as.numeric(n_ot),
-           n_ar = as.numeric(n_ar),
-           rec_mono = as.logical(rec_mono)) %>%
-    mutate(node = as.numeric(node)) %>%
-    mutate(h_hpd_min = as.numeric(h_hpd_min)) %>%
-    mutate(h_hpd_max = as.numeric(h_hpd_max)) %>%
-    mutate(h_hpd_med = as.numeric(h_hpd_med)) %>%
-    filter(!is.na(h_hpd_med)) %>%
-    arrange(desc(h_hpd_med)) %>% ## not sure why needed... bug in dplyr?
-    mutate(order_nds = order(h_hpd_med, decreasing = TRUE))
+get_all_node_data <- function(summary_beast_trees) {
+    summary_beast_trees %>%
+      mutate(n_ot = as.numeric(n_ot),
+             n_ar = as.numeric(n_ar),
+             rec_mono = as.logical(rec_mono)) %>%
+      mutate(node = as.numeric(node)) %>%
+      mutate(h_hpd_min = as.numeric(h_hpd_min)) %>%
+      mutate(h_hpd_max = as.numeric(h_hpd_max)) %>%
+      mutate(h_hpd_med = as.numeric(h_hpd_med)) %>%
+      filter(!is.na(h_hpd_med)) %>%
+      arrange(desc(h_hpd_med)) %>% ## not sure why needed... bug in dplyr?
+      mutate(order_nds = order(h_hpd_med, decreasing = TRUE))
+}
 
-node_data <- node_data_common %>%
-    filter(rec_mono & n_ot > 1 & n_ar > 1) %>%
-    filter(grepl("cousteaui|aphanes|cinerascens|flavomaculata|hartmeyeri|impatiens|olivacea|immobilis|Ohshimella",
-            .$spp)) %>%
-    mutate(spp = paste0("(", order_nds, ") ", spp)) %>%
-    mutate(Species = factor(spp, levels = as.character(spp)))
+get_node_data_endemics <- function(node_data_common) {
+    node_data <- node_data_common %>%
+      filter(rec_mono & n_ot > 1 & n_ar > 1) %>%
+      filter(grepl("cousteaui|aphanes|cinerascens|flavomaculata|hartmeyeri|impatiens|olivacea|immobilis|Ohshimella",
+                   .$spp)) %>%
+      mutate(spp = paste0("(", order_nds, ") ", spp)) %>%
+      mutate(Species = factor(spp, levels = as.character(spp)))
 
-levels(node_data$Species) <- gsub("(aff\\.\\simpatiens)/", "\\1 (ESU Red Sea)/", levels(node_data$Species))
-levels(node_data$Species) <- gsub("olivacea", "aff. olivacea", levels(node_data$Species))
-levels(node_data$Species) <- gsub("(aff\\.\\simpatiens$)", "\\1 (ESU tiger)", levels(node_data$Species))
+    levels(node_data$Species) <- gsub("(aff\\.\\simpatiens)/", "\\1 (ESU Red Sea)/", levels(node_data$Species))
+    levels(node_data$Species) <- gsub("olivacea", "aff. olivacea", levels(node_data$Species))
+    levels(node_data$Species) <- gsub("(aff\\.\\simpatiens$)", "\\1 (ESU tiger)", levels(node_data$Species))
+    node_data
+}
 
-pdf(file = "tmp/node_ages.pdf", width = 10, height = 4)
-ggplot(node_data, aes(x = factor(order_nds), y = h_hpd_med, colour = Species)) +
-  geom_pointrange(aes(ymin = h_hpd_min, ymax = h_hpd_max)) +
-  xlab("Node ID") + ylab("Divergence time (My)") +
-  theme_bw()
-dev.off()
+plot_nodes <- function(node_data) {
+    ggplot(node_data, aes(x = factor(order_nds), y = h_hpd_med, colour = Species)) +
+      geom_pointrange(aes(ymin = h_hpd_min, ymax = h_hpd_max)) +
+      xlab("Node ID") + ylab("Divergence time (My)") +
+      theme_bw()
+}
 
-node_data_supp <- node_data_common %>%
-  ##filter(! node %in% node_data$node) %>%
-  ##filter(!is.na(h_hpd_med) & rec_mono & n_ot <=  2 |  n_ar <= 2) %>%
-  filter(grepl("stuhl|parva|polyplectana|hawaii?ensis", .$spp, ignore.case = T)) %>%
-  mutate(spp = paste0("(", order_nds, ") ", spp)) %>%
-  mutate(Species = factor(spp, levels = as.character(spp)))
+get_node_data_small_samples <- function(node_data_common) {
+    node_data_supp <- node_data_common %>%
+      ##filter(! node %in% node_data$node) %>%
+      ##filter(!is.na(h_hpd_med) & rec_mono & n_ot <=  2 |  n_ar <= 2) %>%
+      filter(grepl("stuhl|parva|polyplectana|hawaii?ensis", .$spp, ignore.case = T)) %>%
+      mutate(spp = paste0("(", order_nds, ") ", spp)) %>%
+      mutate(Species = factor(spp, levels = as.character(spp)))
 
-levels(node_data_supp$Species) <- gsub("(stuhlmanni)", "\\1/Chiridota sp.5", levels(node_data_supp$Species))
-levels(node_data_supp$Species) <- gsub("(kefersteinii)", "\\1/Polyplectana sp.4", levels(node_data_supp$Species))
-levels(node_data_supp$Species) <- gsub("hawaiiensis", "aff. hawaiiensis", levels(node_data_supp$Species))
+    levels(node_data_supp$Species) <- gsub("(stuhlmanni)", "\\1/Chiridota sp.5", levels(node_data_supp$Species))
+    levels(node_data_supp$Species) <- gsub("(kefersteinii)", "\\1/Polyplectana sp.4", levels(node_data_supp$Species))
+    levels(node_data_supp$Species) <- gsub("hawaiiensis", "aff. hawaiiensis", levels(node_data_supp$Species))
 
+    node_data_supp
 
+}
 
-pdf(file = "tmp/node_ages_supp.pdf", width = 10, height = 4)
-ggplot(node_data_supp, aes(x = factor(order_nds), y = h_hpd_med, colour = Species)) +
-  geom_pointrange(aes(ymin = h_hpd_min, ymax = h_hpd_max)) +
-  xlab("Node ID") + ylab("Divergence time (My)") +
-  theme_bw()
-dev.off()
 
 ####
+
+if (FALSE) {
 
 trees <- fetch("get_beast_trees")
 
