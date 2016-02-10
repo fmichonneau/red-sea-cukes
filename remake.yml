@@ -3,6 +3,7 @@ sources:
   - R/find_sister.R
   - R/load_cukeDB.R
   - R/analyze_beast_trees.R
+  - R/make_epa_alg.R
 
 packages:
   - ape
@@ -39,6 +40,21 @@ targets:
     depends:
       - node_plot_endemics.pdf
       - node_plot_small_samples.pdf
+
+  data/raxml-epa-input/epa-input.phy:
+    command: make_epa_alg()
+    cleanup_level: purge
+
+
+  data/raxml-epa-input/RAxML_bestTree.cukeBarcodes.normalized:
+    command: normalize_tree()
+
+  data/raxml-epa-input/RAxML_labelledTree.epaTest:
+    command: run_epa()
+    cleanup_level: purge
+    depends:
+      - data/raxml-epa-input/epa-input.phy
+      - data/raxml-epa-input/RAxML_bestTree.cukeBarcodes.normalized
 
   list_sister_with_dup:
     command: find_sister(tree="data/raxml-epa-input/RAxML_labelledTree.epaTest")
